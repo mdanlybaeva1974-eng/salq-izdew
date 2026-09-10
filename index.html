@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Салық.Поиск — Налоговый кодекс РК</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top"><span>салық</span>.поиск</a>
+    <div class="nav-right"><span class="status"><i></i> Актуальная редакция</span><button class="lang">ҚАЗ</button></div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">НАЛОГОВЫЙ НАВИГАТОР РЕСПУБЛИКИ КАЗАХСТАН</p>
+      <h1>Налоговый кодекс —<br><em>человеческим языком.</em></h1>
+      <p class="lead">Задайте вопрос как обычно. Мы найдём нужную норму и объясним, что она означает для вашей ситуации.</p>
+      <form class="searchbox" id="searchForm">
+        <span class="search-icon">⌕</span><input id="query" autocomplete="off" placeholder="Например: когда возникает НДС?" aria-label="Поиск по Налоговому кодексу" />
+        <button type="submit">Найти ответ <span>→</span></button>
+      </form>
+      <div class="examples"><span>Частые вопросы:</span><button>Нужно ли мне вставать на НДС?</button><button>Какие сроки сдачи отчётности?</button><button>Что можно взять на вычеты?</button></div>
+    </section>
+
+    <section class="results-wrap" id="results" aria-live="polite">
+      <div class="section-heading"><div><p class="eyebrow">РЕКОМЕНДУЕМ НАЧАТЬ</p><h2>Популярные темы</h2></div><p class="count">4 материала в базе</p></div>
+      <div class="cards" id="cards"></div>
+    </section>
+  </main>
+  <footer><span>© 2026 Салық.Поиск</span><span>Справочный сервис, не является налоговой консультацией</span><a href="https://adilet.zan.kz/rus/docs/K2500000214/file_214.htm" target="_blank" rel="noreferrer">Официальный источник: ИПС «Әділет» ↗</a></footer>
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-top"><span class="tag"></span><span class="article"></span></div>
+      <h3></h3><p class="summary"></p>
+      <div class="card-bottom"><a class="source" target="_blank" rel="noreferrer">Открыть статью <span>↗</span></a><button class="detail">Подробнее <span>→</span></button></div>
+      <div class="details"></div>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>
